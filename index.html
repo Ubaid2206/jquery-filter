@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        .box img {
+            width: 200px;
+            margin-top: 15px;
+        }
+
+        .data {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+    </style>
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
+
+<body>
+    <h1>Soccer Players</h1>
+
+    <button class="btn btn-dark" id="all">All</button>
+    <button class="btn btn-dark" id="ronaldo">Ronaldo</button>
+    <button class="btn btn-dark" id="neymar">Neymar Jr</button>
+    <button class="btn btn-dark" id="salah">M Salah</button>
+    <div class="data">
+
+        <div class="box ronaldo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Cristiano_Ronaldo_2023.jpg" alt=""
+                loading="lazy" onerror="this.style.display='none'">
+            <img src="https://pbs.twimg.com/media/Fr7dygtX0A8Hi1d.jpg" alt="" loading="lazy"
+                onerror="this.style.display='none'">
+        </div>
+        <div class="box neymar">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Neymar_PSG.jpg/250px-Neymar_PSG.jpg"
+                alt="">
+        </div>
+        <div class="box salah">
+            <img src="https://backend.liverpoolfc.com/sites/default/files/styles/lg/public/2025-09/mohamed-salah-2025-26-body-shot-straight_1eed4e039fbd8ced5f98958fdf8b6235.webp?itok=ZRY1_Xr6"
+                alt="">
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".box").show();
+
+            $("#all").click(function () {
+                $(".box").show();
+            });
+            $("#ronaldo").click(function () {
+                $(".ronaldo").show();
+                $(".neymar").hide();
+                $(".salah").hide();
+            });
+            $("#neymar").click(function () {
+                $(".ronaldo").hide();
+                $(".neymar").show();
+                $(".salah").hide();
+            });
+            $("#salah").click(function () {
+                $(".ronaldo").hide();
+                $(".neymar").hide();
+                $(".salah").show();
+            });
+        });
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
